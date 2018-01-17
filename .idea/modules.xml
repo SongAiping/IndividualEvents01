@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/IndividualEvents-Dao/IndividualEvents-Dao.iml" filepath="$PROJECT_DIR$/IndividualEvents-Dao/IndividualEvents-Dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IndividualEvents-entity/IndividualEvents-entity.iml" filepath="$PROJECT_DIR$/IndividualEvents-entity/IndividualEvents-entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IndividualEvents-service/IndividualEvents-service.iml" filepath="$PROJECT_DIR$/IndividualEvents-service/IndividualEvents-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IndividualEvents-web/IndividualEvents-web.iml" filepath="$PROJECT_DIR$/IndividualEvents-web/IndividualEvents-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IndividualEvents01.iml" filepath="$PROJECT_DIR$/IndividualEvents01.iml" />
+    </modules>
+  </component>
+</project>

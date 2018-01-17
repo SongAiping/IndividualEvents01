@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>文体部主页</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: '幼圆';
+        }
+        html,body{
+            height: 100%;
+            background-color: #E7F5FF;
+        }
+        @font-face{
+            font-family: 'fontello';
+        }
+        .top{
+            width: 100%;
+            min-width: 800px;
+            height: 11%;
+            overflow: hidden;
+            line-height: 70px;
+            background-color: #1499F7;
+        }
+        .top .logo{
+            width: 230px;
+            height: 100%;
+            color: #FFF;
+            font-size: 22px;
+            margin-left: 12px;
+            float: left;
+            background-size: 60px;
+        }
+        .top .logo span{
+            float: right;
+        }
+        .user{
+            width: 200px;
+            height: 100%;
+            text-align: center;
+            color: #FFF;
+            margin: auto;
+        }
+        .nav{
+            width: 200px;
+            height: 100%;
+            text-align: center;
+            float: right;
+        }
+        .nav a{
+            margin: 0px 6px;
+        }
+        .nav a:link, .nav a:visited{
+            text-decoration: none;
+            color: #FFF;
+        }
+        .main{
+            width: 100%;
+            min-width: 800px;
+            height: 89%;
+            min-height: 500px;
+        }
+        .menu{
+            width: 20%;
+            height: 100%;
+            float: left;
+            background-color: #D5EAF3;
+            -webkit-user-select: none;
+        }
+        .table{
+            width: 80%;
+            height: 100%;
+            float: left;
+            background-color: #E7F5FF;
+        }
+        .menu div, .menu ul li{
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            cursor: pointer;
+            border-bottom: 1px solid #99D9EA;
+        }
+        .menu div:hover, .menu ul li:hover{
+            background-color: #99D9EA;
+        }
+        .menu div span{
+            font-family: 'fontello';
+        }
+        .menu ul{
+            display: none;
+            list-style-type: none;
+            border-bottom: 1px solid #99D9EA;
+        }
+        .menu ul li{
+            border: none;
+        }
+        .menu ul li a{
+            margin-left: 20px;
+        }
+        .menu ul li a:link, .menu ul li a:visited{
+            text-decoration: none;
+            color: #000;
+        }
+        .table iframe{
+            padding: 0px;
+            margin: 0px;
+            width: 98%;
+            height: 98%;
+            border: none;
+            overflow-x: hidden;
+        }
+    </style>
+    <script src="jquery-1.9.1.min.js"></script>
+</head>
+<body>
+<div class="top">
+    <div class="logo"><span>xxx管理系统</span></div>
+    <div class="nav">
+        <a href="#">公告</a>
+        <a href="#">消息(0)</a>
+        <a href="#">注销</a>
+    </div>
+    <div class="user">您好，<span>文体部[XXX]</span></div>
+</div>
+<div class="main">
+    <div class="menu">
+        <div><a href="Sports.jsp" target="test">申请活动</a></div>
+        <ul>
+            <li><a href="Sports.jsp" target="test">申&nbsp;&nbsp;请&nbsp;&nbsp;表</a></li>
+            <li><a href="Sports.html" target="test">其&nbsp;&nbsp;&nbsp;&nbsp;他</a></li>
+        </ul>
+
+        <div><span>&#xf105;</span> 查询信息</div>
+        <ul>
+            <li><a href="audit.html" target="test">待&nbsp;&nbsp;审&nbsp;&nbsp;批</a></li>
+            <li><a href="updateStu.html" target="test">修改信息</a></li>
+            <li><a href="show.html" target="test">全部信息</a></li>
+        </ul>
+        <div><span>&#xf105;</span> 公告管理</div>
+        <ul>
+            <li><a href="notice.html" target="test">公告展出</a></li>
+        </ul>
+        <div><span>&#xf105;</span> 个人设置</div>
+        <ul>
+            <li><a href="#">密码修改</a></li>
+            <li><a href="#">身份切换</a></li>
+        </ul>
+    </div>
+    <div class="table">
+        <iframe src="main.jsp" name="test"></iframe>
+    </div>
+
+</div>
+</body>
+<script>
+    $(function(){
+        $(".top").css("line-height",$(".top").height()+"px");
+    });
+    $(".menu div").click(function(){
+        $(this).parent().find("div").css("border-bottom","1px solid #99D9EA");
+        $(this).parent().find("div span").html("&#xf105;");
+
+        if($(this).prop("class") == "close"){
+            $(this).prop("class","open");
+            $(this).find("span").html("&#xf105;");
+        }else{
+            $(this).prop("class","close");
+            $(this).find("span").html("&#xf107;");
+            $(this).css("border","none");
+        }
+
+        $(this).parent().find("ul").not($(this).next()).slideUp(200);
+        $(this).parent().find("div").not($(this)).prop("class","open");
+
+        $(this).next().slideToggle(200);
+    });
+    $(window).resize(function() {
+        $(".top").css("line-height",$(".top").height()+"px");
+    });
+</script>
+</html>
